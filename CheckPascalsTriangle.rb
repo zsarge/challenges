@@ -1,6 +1,6 @@
 # Challenge name: Check Pascal's Triangle
 # Challenge link: https://www.reddit.com/r/dailyprogrammer/comments/psf4n/2162012_challenge_8_difficult/
-# Completed by Zack Sargent on: {date}
+# Completed by Zack Sargent on: August 29th, 2020
 # Notes: Write a program that will take coordinates,
 #        and tell you the corresponding number in pascals triangle.
 # Resources: https://www.mathsisfun.com/pascals-triangle.html
@@ -31,12 +31,15 @@ end
 
 puts "Input (1,1):"
 puts PascalsTriangle.go_to(1, 1)
+# Returns: 1
 
 puts "\nInput (4,2):"
 puts PascalsTriangle.go_to(4, 2)
+# Returns: 3
 
 puts "\nInput (1,19):"
 puts PascalsTriangle.go_to(1, 19)
+# Returns: nil
 
 puts "\nExtra credit: "
 PascalsTriangle.print(15)
