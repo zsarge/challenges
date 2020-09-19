@@ -1,8 +1,8 @@
 # challenges
 Short and sweet programming challenges, obtained from various places
 
-Each solution should be contained in one file.
-This file should have filled in the following template:
+Each solution should be contained in one file or folder.
+This file should have the following template filled in:
 
 ```c
 // Challenge name: {name}
