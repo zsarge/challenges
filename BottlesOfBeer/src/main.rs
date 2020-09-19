@@ -1,6 +1,6 @@
 // Challenge name: [2/16/2012] Challenge #8 [easy]
 // Challenge link: https://www.reddit.com/r/dailyprogrammer/comments/pserp/2162012_challenge_8_easy/
-// Completed by Zack Sargent on: {date}
+// Completed by Zack Sargent on: September 19th, 2020
 // Notes: This was more to get familiar with rust, rather than to solve a hard problem.
 // Resources: https://lyricsplayground.com/alpha/songs/numbers/99bottlesofbeeronthewall.html
 
