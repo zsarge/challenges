@@ -1,5 +1,5 @@
 # https://projecteuler.net/problem=1
-# Run with: `ruby solve.rb`
+# Run with: `ruby solve1.rb`
 # using Ruby 2.5.1
 # by Zack Sargent
 
