@@ -92,7 +92,7 @@ end
 
 def makeLink(files, dirName) 
   raise "Multiple files not implemented." unless files.size == 1
-  return "[#{dirName}](solutions/#{files[0]})"
+  return "[#{dirName}](solutions/#{dirName}/#{files[0]})"
 end
 
 # takes a name of solution and the solutions,
