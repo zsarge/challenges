@@ -1,6 +1,8 @@
 # Run this script to create a new solution
 # Run by using 'ruby addSolution.rb {challenge number}'
 # or by just 'ruby addSolution.rb'
+#
+# This assumes you are running a linux like system.
 
 problemNumber = ""
 
@@ -30,9 +32,9 @@ template = "# https://projecteuler.net/problem=#{problemNumber}
 puts 'Hello World!'
 "
 
-`mkdir #{problemNumber}`
-`touch #{problemNumber}/#{filename}`
-`echo "#{template}" > #{problemNumber}/#{filename}`
+`mkdir solutions/#{problemNumber}`
+`touch solutions/#{problemNumber}/#{filename}`
+`echo "#{template}" > solutions/#{problemNumber}/#{filename}`
 
 puts ""
-puts "created #{problemNumber}/#{filename}"
+puts "created solutions/#{problemNumber}/#{filename}"
