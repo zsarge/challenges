@@ -15,14 +15,10 @@ Every solution gets its own directory, because I plan on varying the languages I
 To Do:
 
  - create script to modify this readme with links to the solutions
- - Make `addSolution.rb` align all numbers to the thousands place for easy name sorting
+ - Make `addSolution.rb` align all numbers to the thousands place for easy name sorting\
 "
 
-files = Dir.entries("solutions")
-files = files.drop(2) # drop '.' and '..'
-
-arr = (1..100).to_a
-arr = arr.map(&:to_s)
+# Start table generation
 
 def makeColumnElement(number, width)
   width += 2 # add more spacing
@@ -85,11 +81,58 @@ def makeTable(array, cols)
   return table.join
 end
 
-arr[25] = "This is a long test string"
+# Stop table generation
+# Start content generation
+
+def getFilesInDir(dir) 
+  files = Dir.entries(dir)
+  files = files.drop(2) # drop '.' and '..'
+  return files
+end
+
+def makeLink(files, dirName) 
+  raise "Multiple files not implemented." unless files.size == 1
+  return "[#{dirName}](solutions/#{files[0]})"
+end
+
+# takes a name of solution and the solutions,
+# and returns either a link to the solution
+# or the name if the solution doesn't exist
+def getLink(name, solutions)
+  if solutions.key?(name)
+    return solutions[name]
+  else
+    return name
+  end
+end
+
+
+names = getFilesInDir("solutions")
+
+files = {}
+names.each do |name|
+  solutions = getFilesInDir("solutions/#{name}")
+  files.store(name, makeLink(solutions, name))
+end
+
+arr = (1..100).to_a
+arr = arr.map(&:to_s)
+arr = arr.map { |num| getLink(num, files) }
+
+# represent dir as array of objects where
+# dir = [
+#   "1" => ["solve1.rb"],
+#   "2" => ["solve2.rb"],
+# ]
+
+# Create blank space in header:
 10.times do arr.prepend(" ") end
 
 TABLE = makeTable(arr, 10)
 puts TABLE
+
+# Stop content generation
+# Start writing to file
 
 content = "\
 #{HEADER}
@@ -99,3 +142,4 @@ content = "\
 
 File.write("README.md", content, mode: "w")
 
+# Stop writing to file
