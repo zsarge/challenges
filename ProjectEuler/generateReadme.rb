@@ -12,10 +12,8 @@ I use Project Euler mainly for programming challenges, but it also is nice to pr
 
 Every solution gets its own directory, because I plan on varying the languages I use, and this keeps everything uniform.
 
-To Do:
+## My solutions:
 
- - create script to modify this readme with links to the solutions
- - Make `addSolution.rb` align all numbers to the thousands place for easy name sorting\
 "
 
 # Start table generation
