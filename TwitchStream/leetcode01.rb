@@ -4,7 +4,7 @@ def is_valid(s)
   s = s.split("")
   s.keep_if {|char| start_list.include?(char) or stop_list.include?(char) }
 
-  queue = ""
+  stack = ""
 
   # check number
   return false unless s.size.even?
@@ -15,12 +15,12 @@ def is_valid(s)
   # check order
   s.each do |char|
     if start_list.include?(char)
-      queue << char
+      stack << char
     end
     if stop_list.include?(char)
       expected = start_list[stop_list.index(char)] 
-      if queue[-1] == expected 
-        queue = queue.chop
+      if stack[-1] == expected 
+        stack = stack.chop
       else
         return false
       end
