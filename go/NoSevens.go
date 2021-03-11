@@ -15,7 +15,7 @@ import (
 )
 
 func shouldFilter(n int) bool {
-	if n % 7 == 0 {
+	if n%7 == 0 {
 		return false
 	}
 	if strings.Contains(strconv.Itoa(n), "7") {
