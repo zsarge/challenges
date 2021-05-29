@@ -4,7 +4,7 @@
 // Notes: This is just for me to practice go
 // Resources: None
 
-// to run this script, do `go run ShuffleTheArray.go`
+// to run this script, do `go run shuffle_the_array.go`
 
 package main
 
