@@ -16,27 +16,24 @@ Output: [("a", 4), ("b", 3), ("c", 2), ("a", 1)]
 Write a function that converts the input to the output.
 """
 
-
-def make_array(input: str):
-    currentChar = input[0]
+def make_array(chars: str):
+    currentChar = chars[0]
     times = 1
     output = []
 
-    for i in range(1, len(input)):
-        if input[i] == currentChar:
+    for char in chars[1:]:
+        if char == currentChar:
             times += 1
         else:
             output.append((currentChar, times))
-            currentChar = input[i]
+            currentChar = char
             times = 1
 
     output.append((currentChar, times))
     return output
 
-
 def format_array(array: list) -> str:
     return str(array).replace("'", '"')
-
 
 print(format_array(make_array("aaaabbbcca")))
 
