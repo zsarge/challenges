@@ -12,3 +12,6 @@ Cargo.lock
 
 # Ignore Vscode folder
 .vscode
+
+# build files
+*.out
