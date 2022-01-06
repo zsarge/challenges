@@ -3,7 +3,7 @@ import Text.Printf
 
 findSolution :: Integer -> String
 findSolution target =
-    case (find 1 "1") of
+    case find 1 "1" of
        Just a -> a
        Nothing -> "no solution"
     where
